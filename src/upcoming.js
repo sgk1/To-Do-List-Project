@@ -75,29 +75,55 @@ export function upcoming() {
 
     // function to load todoListBox
     function loadTodoListBox() {
-        // creation of todoListBox container
+        
+                // creation of todoListBox container
         const todoListBox = document.createElement('dialog');
+        todoListBox.classList.add('todoListBox');
+
+        // creation of todoListBox title
+        const todoListBoxTitle = document.createElement('h2');
+        todoListBoxTitle.textContent = 'Add To-Do Item';
+        
 
         // creation of title and description
+        const titleLabel = document.createElement('label');
+        titleLabel.textContent = 'Title:';
         const titleInput = document.createElement('input');
         titleInput.placeholder = 'Title';
+        const descriptionLabel = document.createElement('label');
+        descriptionLabel.textContent = 'Description:';
         const descriptionInput = document.createElement('input');
         descriptionInput.placeholder = 'Description (optional)';
 
         //creation of date and deadline container and inputs
         const dueDateDeadlineInput = document.createElement('div');
+        dueDateDeadlineInput.classList.add('dueDateDeadlineInput');
+        
+        const dateLabel = document.createElement('label');
+        dateLabel.textContent = 'Due Date:';
         const dateInput = document.createElement('input');
         dateInput.type = 'date';
         dateInput.placeholder = 'Due Date';
+        const deadlineLabel = document.createElement('label');
+        deadlineLabel.textContent = 'Deadline (optional):';
         const deadlineInput = document.createElement('input');
         deadlineInput.type = 'date';
         deadlineInput.placeholder = 'Deadline (optional)';
+        
+        dueDateDeadlineInput.appendChild(dateLabel);
         dueDateDeadlineInput.appendChild(dateInput);
+        dueDateDeadlineInput.appendChild(deadlineLabel);
         dueDateDeadlineInput.appendChild(deadlineInput);
 
-        //creation of project container andd priority and inputs
+        //creation of project container and priority and inputs
+        
+        const projectLabel = document.createElement('label');
+        projectLabel.textContent = 'Project (optional):';
         const projectInput = document.createElement('input');
         projectInput.placeholder = 'Project (optional)';
+        
+        const priorityLabel = document.createElement('label');
+        priorityLabel.textContent = 'Priority (optional):';
         const prioritySelect = document.createElement('select');
         const defaultOption = document.createElement('option');
         defaultOption.value = 'No priority set';
@@ -112,21 +138,32 @@ export function upcoming() {
 
         //creation of todoListBox buttons - save, cancel, clear
         const todoListBoxbuttons = document.createElement('div');
+        todoListBoxbuttons.classList.add('todoListBoxbuttons');
         const saveBtn = document.createElement('button');
+        saveBtn.classList.add('saveBtn');
         saveBtn.textContent = 'Save';
         const cancelBtn = document.createElement('button');
+        cancelBtn.classList.add('cancelBtn');
         cancelBtn.textContent = 'Cancel';
+        
         const clearBtn = document.createElement('button');
+        clearBtn.classList.add('clearBtn');
         clearBtn.textContent = 'Clear';
         todoListBoxbuttons.appendChild(saveBtn);
         todoListBoxbuttons.appendChild(cancelBtn);
         todoListBoxbuttons.appendChild(clearBtn);
 
         // appending title, description, date, deadline and buttons to todoListBox and todoListBox to content
+        
+        todoListBox.appendChild(todoListBoxTitle);
+        todoListBox.appendChild(titleLabel);
         todoListBox.appendChild(titleInput);
+        todoListBox.appendChild(descriptionLabel);
         todoListBox.appendChild(descriptionInput);
         todoListBox.appendChild(dueDateDeadlineInput);
+        todoListBox.appendChild(projectLabel);
         todoListBox.appendChild(projectInput);
+        todoListBox.appendChild(priorityLabel);
         todoListBox.appendChild(prioritySelect);
         todoListBox.appendChild(todoListBoxbuttons);
         content.appendChild(todoListBox);

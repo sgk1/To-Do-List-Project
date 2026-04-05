@@ -175,3 +175,35 @@ dialog::backdrop {
     color: white;
 }
 
+.todoListBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    justify-content: left;
+    border: 2px solid rgb(231, 168, 112);
+    background-color: antiquewhite;
+}
+
+.dueDateDeadlineInput {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.saveBtn, .clearBtn, .cancelBtn {
+    padding: 10px;
+    background-color: rgb(209, 209, 221);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    
+}
+
+.todoListBoxbuttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
