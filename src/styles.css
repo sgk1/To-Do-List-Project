@@ -1,0 +1,177 @@
+/* styles.css */
+
+.container {
+    display: flex;
+    
+    font-size:12px;
+    
+}
+
+
+.left-pane {
+    width: 10%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    font-family: Arial, sans-serif;
+    font-size:1.2rem;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
+
+.app-title-left-pane {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.left-pane-button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(209, 209, 221);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.left-pane-button.active {
+    background-color: rgb(231, 168, 112);
+    color: white;
+}
+
+/* for js pages below */
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.addTodoList {
+    width:100%;
+    height: 50px;
+    display:flex;
+    justify-content: left;
+    background-color: rgb(231, 168, 112);
+    padding: 10px;
+}
+
+.addTodoListBtn {
+    padding: 10px;
+    background-color: rgb(209, 209, 221);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5); /* dim background */
+}
+
+.todoItemContainer {
+    display: flex;
+    align-items: center;
+    gap:30px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.todoItemDueDate {
+    
+    width:10%;
+    font-size: 1.2rem;
+    color: #888;
+    
+}
+
+.todoItemTitle {
+    width: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    
+}
+
+.projectTag {
+    font-size: 1.2rem;
+    width: 10%;
+    color: #555;
+    padding: 5px 10px;
+    background-color: rgb(229, 229, 235);
+    border-radius: 5px;
+    color: black;
+}
+
+.priorityTag {
+    font-size: 1.2rem;
+    width: 10%;
+    color: #555;
+    padding: 5px 10px;
+    background-color: rgb(229, 229, 235);
+    border-radius: 5px;
+    color: black;
+}
+
+.deleteBtn {
+    padding: 5px 10px;
+    background-color: rgb(209, 209, 221);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    
+}
+
+.Projects-heading-left-pane {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.Projects-list-left-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    
+}
+
+.projectBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(209, 209, 221);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.projectBtn.active {
+    background-color: rgb(231, 168, 112);
+    color: white;
+}
+
